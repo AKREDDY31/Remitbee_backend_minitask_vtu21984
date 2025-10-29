@@ -1,9 +1,5 @@
-// controllers/userController.js
-// Contains business logic for CRUD operations
-
 const { readData, writeData } = require('../utils/fileHandler');
 
-// GET /users
 const getUsers = (req, res, next) => {
   try {
     const users = readData();
@@ -13,24 +9,16 @@ const getUsers = (req, res, next) => {
   }
 };
 
-// POST /users
 const addUser = (req, res, next) => {
   try {
     const users = readData();
     const { name, email, age } = req.body;
 
-    // Check for existing email
     if (users.find(u => u.email === email)) {
       return res.status(400).json({ message: 'Email already exists' });
     }
 
-    const newUser = {
-      id: Date.now(),
-      name,
-      email,
-      age
-    };
-
+    const newUser = { id: Date.now(), name, email, age };
     users.push(newUser);
     writeData(users);
     res.status(201).json({ message: 'User added successfully', user: newUser });
@@ -39,7 +27,6 @@ const addUser = (req, res, next) => {
   }
 };
 
-// PUT /users/:id
 const updateUser = (req, res, next) => {
   try {
     const users = readData();
@@ -51,7 +38,6 @@ const updateUser = (req, res, next) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    // Update only provided fields
     users[index] = {
       ...users[index],
       name: name || users[index].name,
@@ -66,7 +52,6 @@ const updateUser = (req, res, next) => {
   }
 };
 
-// DELETE /users/:id
 const deleteUser = (req, res, next) => {
   try {
     const users = readData();
