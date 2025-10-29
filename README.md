@@ -1,11 +1,12 @@
-# RemitBee Backend Developer Task
+ RemitBee Backend Developer Task
 
-## 🧠 Objective
+Objective:
 Develop a simple REST API for managing user records (CRUD) using Node.js and Express.js.
 
 ---
 
-## ⚙️ Requirements & Features
+Requirements & Features:
+
 - Node.js + Express.js
 - Endpoints:
   - `GET /users` → Fetch all users
@@ -18,8 +19,7 @@ Develop a simple REST API for managing user records (CRUD) using Node.js and Exp
 - Tested using Postman
 
 ---
-
-## 🚀 Setup & Run
+Setup & Run:
 ```bash
 npm install
 npm start
