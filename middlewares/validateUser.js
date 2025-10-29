@@ -1,6 +1,3 @@
-// middlewares/validateUser.js
-// Simple validation middleware for user input
-
 module.exports = (req, res, next) => {
   const { name, email, age } = req.body;
 
@@ -11,7 +8,5 @@ module.exports = (req, res, next) => {
   if (typeof age !== 'number' || age <= 0) {
     return res.status(400).json({ message: 'Age must be a positive number' });
   }
-
-  // If all good, move to next step
   next();
 };
