@@ -1,6 +1,3 @@
-// middlewares/errorHandler.js
-// Handles internal server errors neatly
-
 module.exports = (err, req, res, next) => {
   console.error('💥 Internal Error:', err.message);
   res.status(500).json({
