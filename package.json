@@ -1,0 +1,18 @@
+{
+  "name": "vtu21984_remitbee_backend_task",
+  "version": "1.0.0",
+  "description": "A simple REST API for managing users (CRUD) built for RemitBee Backend Developer Task",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["RemitBee", "Backend", "CRUD", "API"],
+  "author": "Your Name",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security"
+  }
+}
