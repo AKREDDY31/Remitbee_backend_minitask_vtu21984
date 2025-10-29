@@ -1,9 +1,5 @@
-// routes/userRoutes.js
-// Defines all CRUD endpoints for users
-
 const express = require('express');
 const router = express.Router();
-
 const {
   getUsers,
   addUser,
